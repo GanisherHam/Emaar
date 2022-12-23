@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "AlethiaPro-Regular";
+  src: url(../fonts/alethiapro-regular.otf);
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url(../fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Medium";
+  src: url(../fonts/Lato-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url(../fonts/Lato-Regular.ttf);
+}
