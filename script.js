@@ -27,3 +27,13 @@ const swiper = new Swiper(".swiper", {
     type: "fraction",
   },
 });
+
+function showNumber() {
+  const showBtn = document.querySelector(".fb-social p > button");
+  const hiddenNumber = document.querySelector(".fb-social p");
+  showBtn.addEventListener("click", (e) => {
+    hiddenNumber.classList.toggle("active");
+  });
+}
+
+showNumber();
