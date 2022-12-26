@@ -1372,18 +1372,13 @@ html {
 /* APARTMENT POPUP START */
 
 .apartment-popup {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  transition: all 0.5s;
-  z-index: 100;
   background-color: #fff;
-  display: none;
+  /* display: none; */
 }
 
-.apartment-popup.show {
+/* .apartment-popup.show {
   display: block;
-}
+} */
 
 .apartment-header {
   background-color: #fff;

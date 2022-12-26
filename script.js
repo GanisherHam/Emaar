@@ -91,21 +91,35 @@ popUp("cta__button", "cta-popup", "ps-content button");
 popUp("unique__button", "unique-popup", "payment-detail button");
 
 // APARTMENT POPUP
-function apartmentPopUp() {
-  const riseBtn = document.querySelectorAll(".rise-btn");
-  const apartmentClose = document.querySelector(".apartment-header a");
-  const apartPopUp = document.querySelector(".apartment-popup");
-  for (let key of riseBtn) {
-    key.addEventListener("click", (e) => {
-      e.preventDefault();
-      apartPopUp.classList.add("show");
-    });
+// function apartmentPopUp() {
+//   const riseBtn = document.querySelectorAll(".rise-btn");
+//   const apartmentClose = document.querySelector(".apartment-header a");
+//   const apartPopUp = document.querySelector(".apartment-popup");
+//   for (let key of riseBtn) {
+//     key.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       apartPopUp.classList.add("show");
+//     });
 
-    apartmentClose.addEventListener("click", (e) => {
+//     apartmentClose.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       apartPopUp.classList.remove("show");
+//     });
+//   }
+// }
+
+// apartmentPopUp();
+
+// APARTMENT PAGE
+
+function apartPage() {
+  const riseBtn = document.querySelectorAll(".rise-btn");
+  for (let btn of riseBtn) {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
-      apartPopUp.classList.remove("show");
+      window.location.href = "apartment.html";
     });
   }
 }
 
-apartmentPopUp();
+apartPage();
