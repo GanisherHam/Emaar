@@ -51,7 +51,7 @@ function showNumber() {
 
 showNumber();
 
-// CTA POPUP FUCTION
+// POPUP FUCTION
 
 function popUp(close, cont, btn) {
   const ctaBtn = document.querySelector(`.${close}`);
@@ -89,3 +89,23 @@ popUp("cta__button", "cta-popup", "ps-content button");
 
 // UNIQUE POPUP
 popUp("unique__button", "unique-popup", "payment-detail button");
+
+// APARTMENT POPUP
+function apartmentPopUp() {
+  const riseBtn = document.querySelectorAll(".rise-btn");
+  const apartmentClose = document.querySelector(".apartment-header a");
+  const apartPopUp = document.querySelector(".apartment-popup");
+  for (let key of riseBtn) {
+    key.addEventListener("click", (e) => {
+      e.preventDefault();
+      apartPopUp.classList.add("show");
+    });
+
+    apartmentClose.addEventListener("click", (e) => {
+      e.preventDefault();
+      apartPopUp.classList.remove("show");
+    });
+  }
+}
+
+apartmentPopUp();

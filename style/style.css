@@ -570,7 +570,7 @@ html {
 }
 
 /* SWIPER START */
-.swiper {
+.swiper-main {
   width: 888px;
   height: 460px;
 }
@@ -580,19 +580,16 @@ html {
   display: none;
 }
 
-.swiper-button-prev img {
+.swiper-prev img {
   transform: rotate(180deg) translate(-5%);
 }
-.swiper-button-next img {
+.swiper-next img {
   transform: translate(-5%);
 }
 
-.swiper-pagination {
+.swiper-number {
   position: static !important;
   width: fit-content !important;
-}
-
-.swiper-number {
   font-family: var(--font-latoL);
   font-style: normal;
   font-weight: 300;
@@ -619,12 +616,12 @@ html {
   color: #071c35;
 }
 
-.swiper-slide {
+.swiper-card {
   display: flex;
   justify-content: center;
 }
 
-.swiper-slide > img {
+.swiper-card > img {
   width: 440px;
   height: 400px;
 }
@@ -994,7 +991,6 @@ html {
 /* CTA POPUP START */
 .cta-popup {
   background: rgba(228, 228, 228, 0.85);
-  backdrop-filter: blur(15px);
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1372,3 +1368,550 @@ html {
   cursor: pointer;
 }
 /* UNIQUE POPUP END */
+
+/* APARTMENT POPUP START */
+
+.apartment-popup {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  transition: all 0.5s;
+  z-index: 100;
+  background-color: #fff;
+  display: none;
+}
+
+.apartment-popup.show {
+  display: block;
+}
+
+.apartment-header {
+  background-color: #fff;
+  padding: 35px 0;
+}
+
+.apartment-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apartment-header h2 {
+  font-family: var(--font-alethia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #071c35;
+}
+
+.apartment-header a {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #071c35;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.apartment-hero {
+  background-image: url(../img/creek-rise/creekRise-bg.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+.apartment-hero .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 64px;
+}
+
+.hero-block {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+  padding: 50px;
+  width: 306px;
+  height: 535px;
+  grid-row: 2 / 6;
+}
+
+.hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.hero-list li {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.hero-list span {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #071c35;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-list span::before {
+  position: absolute;
+  content: "";
+  background: #071c35;
+  opacity: 0.1;
+  height: 1px;
+  top: -50%;
+  right: 0;
+}
+
+.hero-list li:nth-of-type(1) span::before {
+  width: 145px;
+}
+
+.hero-list li:nth-of-type(2) span::before {
+  width: 80px;
+}
+
+.hero-list li:nth-of-type(3) span::before {
+  width: 17px;
+}
+
+.hero-list li:nth-of-type(4) span::before {
+  width: 75px;
+}
+
+.hero-block button {
+  background: #071c35;
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.apartment-hero p {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  color: #777777;
+  grid-column: 2 / 5;
+  grid-row: 5/ 6;
+}
+
+/* APARTMENT LANDMARK START */
+.apartment-landmark {
+  padding: 100px 0 156px;
+}
+.landmark-line {
+  background: #071c35;
+  width: 1300px;
+  height: 2px;
+}
+
+.landmark-places {
+  display: flex;
+  justify-content: space-around;
+}
+
+.landmark-place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 38px;
+}
+
+.landmark-place::after {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background: #071c35;
+  position: absolute;
+  bottom: 0;
+}
+
+.landmark-place::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #071c35;
+  position: absolute;
+  bottom: -10px;
+}
+
+.landmark-place h5,
+.landmark-place--bottom h5 {
+  margin-top: 17px;
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.landmark-place h5 > span,
+.landmark-place--bottom h5 > span {
+  font-family: var(--font-latoR);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #071c35;
+}
+
+.landmark-places--bottom {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.landmark-place--bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 38px;
+}
+
+.landmark-place--bottom::after {
+  content: "";
+  width: 2px;
+  height: 30px;
+  background: #071c35;
+  position: absolute;
+  top: 0;
+}
+
+.landmark-place--bottom::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #071c35;
+  position: absolute;
+  top: -10px;
+}
+
+.landmark-places--bottom button {
+  background: #071c35;
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 150px;
+  height: 40px;
+  margin-top: 75px;
+  cursor: pointer;
+}
+/* APARTMENT LANDMARK END */
+
+/* APARTMENT GALLERY START */
+.apartment-gallery {
+  padding-bottom: 148px;
+}
+
+.apartment-gallery .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 22px;
+}
+
+.apartment-gallery img:nth-of-type(1) {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+}
+.apartment-gallery img:nth-of-type(2) {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+}
+.apartment-gallery img:nth-of-type(3) {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+}
+/* APARTMENT GALLERY END */
+
+/* APARTMENT SWIPER START */
+
+.apartment-plans {
+  padding-bottom: 150px;
+}
+
+.swiper-floor {
+  width: 1300px;
+}
+
+.swiper-plan {
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-header {
+  justify-content: space-between;
+  max-width: 970px;
+  width: 100%;
+}
+
+.plan-detail h3 {
+  font-family: var(--font-alethia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #071c35;
+  margin-bottom: 5px;
+}
+.plan-detail p {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #777777;
+  margin-bottom: 73px;
+}
+
+.plan-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+
+.plan-list li {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #071c35;
+}
+
+.plan-list span {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #071c35;
+}
+
+.plan-list span::after {
+  padding: 0 9px;
+}
+
+.plan-list li:nth-of-type(1) span::after {
+  content: url("../img/svg-icons/Line1.svg");
+}
+.plan-list li:nth-of-type(2) span::after {
+  content: url("../img/svg-icons/Line2.svg");
+}
+.plan-list li:nth-of-type(3) span::after {
+  content: url("../img/svg-icons/Line3.svg");
+}
+
+.plan-detail h4 {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #003d5f;
+  margin-bottom: 110px;
+}
+
+.plan-detail button {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 363px;
+  height: 47.36px;
+  background: #071c35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* APARTMENT SWIPER END */
+
+/* APARTMENT PAYMENT START */
+.apartment-payment {
+  padding-bottom: 150px;
+}
+
+.apartment-payment .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.apartment-payment h3 {
+  font-family: var(--font-alethia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+}
+
+.ap-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.ap-detail h2 {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-detail h2 > span {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+}
+/* APARTMENT PAYMENT END */
+
+/* APARTMENT UNIQUE START */
+.apartment-unique {
+  padding-bottom: 150px;
+}
+
+.au-content h2 {
+  font-family: var(--font-alethia);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #071c35;
+  margin-bottom: 10px;
+}
+
+.au-content p {
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #777777;
+  margin-bottom: 49px;
+}
+
+.au-form {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.au-form input {
+  border: none;
+  border-bottom: 1px solid rgba(7, 28, 53, 0.1);
+  padding: 9px 10px 12px;
+  outline: none;
+  font-family: var(--font-latoL);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #071c35;
+}
+
+.au-form input[type="number"]::-webkit-inner-spin-button,
+.au-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.au-form button {
+  font-family: var(--font-latoR);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 12px 45px;
+  background: #071c35;
+  cursor: pointer;
+}
+
+.apartment-footer {
+  background: #071c35;
+  height: 30px;
+}
+/* APARTMENT UNIQUE END */
+
+/* APARTMENT POPUP END */
