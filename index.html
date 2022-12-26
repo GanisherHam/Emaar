@@ -11,6 +11,63 @@
 </head>
 
 <body>
+    <div class="cta-popup">
+        <div class="container">
+            <div class="cta-block">
+                <div class="cta-contact">
+                    <img src="img/svg-icons/footer-logo.svg" alt="">
+                    <div class="cta-info">
+                        <h4>contact us right now</h4>
+                        <div class="cta-social">
+                            <a href="#">telegram <img src="img/svg-icons/telegram.svg" alt=""></a>
+                            <a href="#">whatsapp <img src="img/svg-icons/whatsapp.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <form class="cta-form">
+                    <h2>download <br> brochure</h2>
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <input type="number" placeholder="Phone number" required>
+                    <button>Download brochure</button>
+                </form>
+            </div>
+            <button class="cta__button">close <img src="img/svg-icons/close.svg" alt=""></button>
+        </div>
+    </div>
+
+    <div class="unique-popup">
+        <div class="container">
+            <div class="unique-layer">
+                <div class="unique-block">
+                    <div class="unique-contact">
+                        <img src="img/svg-icons/unique-logo.svg" alt="">
+                        <h4>contact us right now</h4>
+                        <div class="unique-social">
+                            <a href="#">telegram <img src="img/svg-icons/telegram.svg" alt=""></a>
+                            <a href="#">whatsapp <img src="img/svg-icons/whatsapp.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="unique-offer">
+                        <h2>get a unique offer</h2>
+                        <form class="unique-form">
+                            <input type="text" placeholder="Your name" required>
+                            <input type="email" placeholder="Your email" required>
+                            <input type="number" placeholder="Phone number" required>
+                            <button>Download brochure</button>
+                        </form>
+                        <ul class="unique-list">
+                            <li><a href="#">Handover dates</a></li>
+                            <li><a href="#">Project's</a></li>
+                            <li><a href="#">Masterplan</a></li>
+                        </ul>
+                    </div>
+                    <button class="unique__button">close <img src="img/svg-icons/close.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section class="first-section">
             <div class="container">
@@ -80,7 +137,7 @@
             </div>
         </section>
 
-        <section class="top-projects">
+        <section id="top" class="top-projects">
             <div class="container">
                 <h2 class="tp__title">top projects</h2>
                 <div class="tp-cards">
@@ -129,7 +186,7 @@
                         <input type="radio" name="city" />
                         <div class="ml-card">
                             <img src="img/dubaiCreek-small.png" alt="" />
-                            <span>DUBAI HILLS ESTATE</span>
+                            <span>DUBAI HILLS <br> ESTATE</span>
                         </div>
                         <p>
                             DUBAI HILLS <br />
@@ -140,7 +197,7 @@
                         <input type="radio" name="city" checked />
                         <div class="ml-card">
                             <img src="img/dubaiCreek-small.png" alt="" />
-                            <span>DUBAI CREEK HARBOUR</span>
+                            <span>DUBAI CREEK <br> HARBOUR</span>
                         </div>
                         <p>
                             DUBAI CREEK <br />
@@ -151,7 +208,7 @@
             </div>
         </section>
 
-        <section class="comunity-section">
+        <section id="comunity" class="comunity-section">
             <div class="container">
                 <div class="cs-menu">
                     <form class="cs-form">
@@ -369,7 +426,7 @@
                 </div>
         </section>
 
-        <section class="option-section">
+        <section id="payment" class="option-section">
             <div class="container">
                 <div class="payment">
                     <img src="img/payment-option.png" alt="">
@@ -408,7 +465,7 @@
                     <form class="feedback-form">
                         <input type="text" placeholder="Your name" required>
                         <input type="email" placeholder="Your email" required>
-                        <input type="phone" placeholder="Phone number" required>
+                        <input type="number" placeholder="Phone number" required>
                         <button>request a call</button>
                     </form>
                 </div>
@@ -421,14 +478,14 @@
             <div class="footer-content">
                 <div class="footer-block">
                     <ul class="footer-list">
-                        <li><a href="#">top projects</a></li>
-                        <li><a href="#">community</a></li>
-                        <li><a href="#">payment option</a></li>
+                        <li><a href="#top">top projects</a></li>
+                        <li><a href="#comunity">community</a></li>
+                        <li><a href="#payment">payment option</a></li>
                     </ul>
                     <div class="fb-social">
                         <p>971 56-456-7890 <button>show</button></p>
-                        <a href="">telegram <img src="img/svg-icons/telegram.svg" alt=""></a>
-                        <a href="">whatsapp <img src="img/svg-icons/whatsapp.svg" alt=""></a>
+                        <a href="#">telegram <img src="img/svg-icons/telegram.svg" alt=""></a>
+                        <a href="#">whatsapp <img src="img/svg-icons/whatsapp.svg" alt=""></a>
                     </div>
                 </div>
                 <img src="img/svg-icons/footer-logo.svg" alt="">

@@ -1,18 +1,30 @@
-// const inputCard = document.querySelectorAll(".ml-form input");
-// const labelCard = document.querySelectorAll(".ml-form label");
+// MAP LOCATION SECTION
 
-// key.oninput = function () {
-//   for (let key of Array.from(inp)) {
-//     if (key.checked) {
-//       if (Array.from(inputCard).indexOf(key) == 2) {
-//         Array.from(labelCard)[2].style.top = "2%";
-//       } else if (Array.from(inputCard).indexOf(key) == 1) {
-//         Array.from(labelCard)[1].style.top = "-50%";
-//       }
-//     }
-//   }
-// };
+function mapLocation() {
+  const inputCard = document.querySelectorAll(".ml-form input");
+  for (let key of inputCard) {
+    key.onchange = function () {
+      let indexOfInput = Array.from(inputCard).indexOf(key);
+      if (indexOfInput == 2) {
+        key.parentNode.parentElement.children[0].classList.remove("position");
+        key.parentNode.parentElement.children[1].classList.remove("position");
+        key.parentNode.parentElement.children[2].classList.remove("position");
+      } else if (indexOfInput == 1) {
+        key.parentNode.parentElement.children[0].classList.remove("position");
+        key.parentNode.parentElement.children[2].classList.add("position");
+        key.parentNode.parentElement.children[1].classList.add("position");
+      } else if (indexOfInput == 0) {
+        key.parentNode.parentElement.children[2].classList.add("position");
+        key.parentNode.parentElement.children[1].classList.remove("position");
+        key.parentNode.parentElement.children[0].classList.add("position");
+      }
+    };
+  }
+}
 
+mapLocation();
+
+// Slider
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -28,6 +40,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// FOOTER SHOW NUMBER
 function showNumber() {
   const showBtn = document.querySelector(".fb-social p > button");
   const hiddenNumber = document.querySelector(".fb-social p");
@@ -37,3 +50,42 @@ function showNumber() {
 }
 
 showNumber();
+
+// CTA POPUP FUCTION
+
+function popUp(close, cont, btn) {
+  const ctaBtn = document.querySelector(`.${close}`);
+  const ctaContainer = document.querySelector(`.${cont}`);
+  const seeMoreBtn = document.querySelector(`.${btn}`);
+
+  seeMoreBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    ctaContainer.classList.add("show");
+    document.body.style.overflow = "hidden";
+  });
+
+  ctaBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    ctaContainer.classList.remove("show");
+    document.body.style.overflow = "";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target == ctaContainer) {
+      ctaContainer.classList.remove("show");
+    }
+  });
+
+  document.addEventListener("keyup", (event) => {
+    if (event.code === "Escape") {
+      ctaContainer.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+// CTA POPUP
+popUp("cta__button", "cta-popup", "ps-content button");
+
+// UNIQUE POPUP
+popUp("unique__button", "unique-popup", "payment-detail button");
